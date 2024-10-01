@@ -314,7 +314,7 @@ void CSettingsDlg::AudioInputChoice()
 	auto it = AudioInMap.find(selected);
 	if (AudioInMap.end() == it)
 	{
-		data.sAudioIn.assign("ERROR");
+		data.sAudioIn.assign(_("ERROR"));
 		pAudioInputDescBox->label(std::string(selected+notfoundstr).c_str());
 
 	}
