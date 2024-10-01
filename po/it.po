@@ -1,12 +1,12 @@
-# Italian translation of mvoice.
+# Italian translation of yamvoice.
 # Copyright (c) 2019-2022 by Thomas A. Early N7TAE
-# This file is distributed under the same license as the mvoice package.
+# This file is distributed under the same license as the yamvoice package.
 # Daniele Forsi <iu5hkx@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mvoice\n"
-"Report-Msgid-Bugs-To: https://github.com/n7tae/mvoice/issues\n"
+"Project-Id-Version: yamvoice\n"
+"Report-Msgid-Bugs-To: https://github.com/jg1uaa/yamvoice/issues\n"
 "POT-Creation-Date: 2023-02-19 21:05+0100\n"
 "PO-Revision-Date: 2023-02-20 21:11+0100\n"
 "Last-Translator: Daniele Forsi <iu5hkx@gmail.com>, 2023\n"
@@ -18,8 +18,8 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 
 #: AboutDlg.cpp:34
-msgid "About MVoice"
-msgstr "Informazioni su MVoice"
+msgid "About YaMVoice"
+msgstr "Informazioni su YaMVoice"
 
 #: MainWindow.cpp:44
 msgid "PTT"
@@ -277,8 +277,8 @@ msgstr "ERRORE: unexpected IOID="
 
 #: AboutDlg.cpp:39
 #, c-format
-msgid "MVoice version # %s"
-msgstr "MVoice versione %s"
+msgid "YaMVoice version # %s"
+msgstr "YaMVoice versione %s"
 
 #: MainWindow.cpp:253
 msgid "Action"

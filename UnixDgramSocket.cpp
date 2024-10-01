@@ -31,7 +31,7 @@
 
 #ifdef USE_NAMED_SOCKET
 #define SocketNamePtr(x) (x)
-#define StoreSocketName(x, n) snprintf(SocketNamePtr(x), sizeof(x), "/tmp/.mvoice-%s.sock", (n))
+#define StoreSocketName(x, n) snprintf(SocketNamePtr(x), sizeof(x), "/tmp/.yamvoice-%s.sock", (n))
 #define SaveSocketPath(x) {socket_path = (x);}
 #define RemoveSocketPath() remove(socket_path.c_str())
 #else

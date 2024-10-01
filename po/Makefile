@@ -1,7 +1,7 @@
-include ../mvoice.mk
+BASEDIR = /usr/local
 
 LOCALEDIR = $(BASEDIR)/share/locale
-DOMAIN = mvoice
+DOMAIN = yamvoice
 LINGUAS = it
 
 all:

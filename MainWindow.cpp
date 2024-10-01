@@ -182,7 +182,7 @@ bool CMainWindow::Init()
 	futReadThread = std::async(std::launch::async, &CMainWindow::ReadThread, this);
 
 	pIcon = new Fl_RGB_Image(icon_image.pixel_data, icon_image.width, icon_image.height, icon_image.bytes_per_pixel);
-	pWin = new Fl_Double_Window(900, 600, "MVoice");
+	pWin = new Fl_Double_Window(900, 600, "YaMVoice");
 	pWin->icon(pIcon);
 	pWin->box(FL_BORDER_BOX);
 	pWin->size_range(760, 440);
@@ -1093,8 +1093,8 @@ int main (int argc, char **argv)
 	setlocale(LC_ALL, "");
 	std::string localedir(BASEDIR);
 	localedir.append("/share/locale");
-	bindtextdomain("mvoice", localedir.c_str());
-	textdomain("mvoice");
+	bindtextdomain("yamvoice", localedir.c_str());
+	textdomain("yamvoice");
 
 	// make the user's config directory
 	auto home = getenv("HOME");

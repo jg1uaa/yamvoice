@@ -31,12 +31,12 @@ CAboutDlg::~CAboutDlg() {}
 
 bool CAboutDlg::Init(Fl_RGB_Image *pIcon)
 {
-	pDlg = new Fl_Double_Window(400, 200, _("About MVoice"));
+	pDlg = new Fl_Double_Window(400, 200, _("About YaMVoice"));
 
 	pIconBox = new Fl_Box(176, 30, 48, 48);
 	pIconBox->image(pIcon);
 
-	snprintf(version, sizeof(version), _("MVoice version # %s"), VERSION);
+	snprintf(version, sizeof(version), _("YaMVoice version # %s"), VERSION);
 
 	pVersionBox = new Fl_Box(0, 100, 400, 30, version);
 
