@@ -68,6 +68,9 @@ endif()
 
 if(${AUDIO} STREQUAL "alsa")
     pkg_check_modules(AUDIO_API REQUIRED alsa)
+    set(AUDIOMANAGER_SRC AudioManagerALSA.cpp)
+    set(SETTINGSDLG_SRC SettingsDlgALSA.cpp)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_ALSA")
 else()
     message(FATAL_ERROR "unsupported audio API")
 endif()
@@ -78,6 +81,7 @@ file(GLOB SRC
 	codec2/*.cpp
 	AboutDlg.cpp
 	AudioManager.cpp
+	${AUDIOMANAGER_SRC}
 	Base.cpp
 	Callsign.cpp
 	Configure.cpp
@@ -86,6 +90,7 @@ file(GLOB SRC
 	M17RouteMap.cpp
 	MainWindow.cpp
 	SettingsDlg.cpp
+	${SETTINGSDLG_SRC}
 	TransmitButton.cpp
 	UDPSocket.cpp
 	UnixDgramSocket.cpp
