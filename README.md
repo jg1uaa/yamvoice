@@ -2,8 +2,6 @@
 
 *M17 Digital Voice* , [mvoice](https://github.com/n7tae/mvoice), is developed by Tom Early (N7TAE) and it runs on Linux only. This fork, called *yamvoice*, is intended for running mvoice on non-Linux environment, especially OpenBSD.
 
-**Note: OpenBSD support is now work-in-progress.**
-
 ## Building tools and prerequisites
 
 At least, CMake, FLTK, libcurl, libintl, and library for audio API (libsndio or libasound) is required. OpenDHT is optional.
