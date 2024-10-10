@@ -21,6 +21,7 @@
 #include <netinet/in.h>
 
 #include <iostream>
+#include <thread>
 
 #include "MainWindow.h"
 #include "AudioManager.h"

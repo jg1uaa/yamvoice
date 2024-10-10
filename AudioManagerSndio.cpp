@@ -20,6 +20,7 @@
 #include <sndio.h>
 
 #include <iostream>
+#include <thread>
 
 #include "MainWindow.h"
 #include "AudioManager.h"
