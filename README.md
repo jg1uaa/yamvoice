@@ -35,7 +35,7 @@ You can use following options for cmake, like `cmake -DAUDIO=sndio ..` .
 
 <dl>
  <dt><code>AUDIO</code>
- <dd>Select audio API, <code>sndio</code> (OpenBSD default) or <code>alsa</code> (Linux default).
+ <dd>Select audio API, <code>sndio</code> (OpenBSD default), <code>alsa</code> (Linux default) or <code>pulse</code> (experimental).
  <dt><code>BASEDIR</code>
  <dd>Base directory for install (like --prefix of configure), default <code>/usr/local</code> .
  <dt><code>CFGDIR</code>
