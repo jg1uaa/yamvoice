@@ -21,6 +21,9 @@
 
 #include "SettingsDlg.h"
 
+#include <libintl.h>
+#define _(STRING) gettext(STRING)
+
 void CSettingsDlg::AudioRescanButton()
 {
 	auto inchoice = pAudioInputChoice->value();

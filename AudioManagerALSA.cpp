@@ -26,6 +26,9 @@
 #include "MainWindow.h"
 #include "AudioManager.h"
 
+#include <libintl.h>
+#define _(STRING) gettext(STRING)
+
 void CAudioManager::mic2audio()
 {
 	auto data = pMainWindow->cfg.GetData();
