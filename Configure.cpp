@@ -44,7 +44,7 @@ void CConfigure::ReadData()
 {
 	SetDefaultValues();
 	std::string path(CFGDIR);
-	path.append("/mvoice.cfg");
+	path.append("/yamvoice.cfg");
 
 	std::ifstream cfg(path.c_str(), std::ifstream::in);
 	if (! cfg.is_open()) {
@@ -96,7 +96,7 @@ void CConfigure::ReadData()
 void CConfigure::WriteData()
 {
 	std::string path(CFGDIR);
-	path.append("/mvoice.cfg");
+	path.append("/yamvoice.cfg");
 
 	// directory exists, now make the file
 	std::ofstream file(path.c_str(), std::ofstream::out | std::ofstream::trunc);

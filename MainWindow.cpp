@@ -240,7 +240,7 @@ bool CMainWindow::Init()
 	}
 
 	pIcon = new Fl_RGB_Image(icon_image.pixel_data, icon_image.width, icon_image.height, icon_image.bytes_per_pixel);
-	pWin = new Fl_Double_Window(900, 600, "MVoice");
+	pWin = new Fl_Double_Window(900, 600, "YaMVoice");
 	pWin->icon(pIcon);
 	pWin->box(FL_BORDER_BOX);
 	pWin->size_range(760, 440);
@@ -400,7 +400,7 @@ bool CMainWindow::Init()
 	try {
 		node.run(17171, dht::crypto::generateIdentity(idstr), true, 59973);
 	} catch (const std::exception &e) {
-		std::cout << "MVoice could not start the Ham-network! " << e.what() << std::endl;
+		std::cout << "YaMVoice could not start the Ham-network! " << e.what() << std::endl;
 		return true;
 	}
 
@@ -434,7 +434,7 @@ bool CMainWindow::Init()
 	}
 	else
 	{
-		std::cout << "ERROR: MVoice did not bootstrap the Ham-DHT network!" << std::endl;
+		std::cout << "ERROR: YaMVoice did not bootstrap the Ham-DHT network!" << std::endl;
 	}
 #endif
 
@@ -1281,8 +1281,8 @@ int main (int argc, char **argv)
 	setlocale(LC_ALL, "");
 	std::string localedir(BASEDIR);
 	localedir.append("/share/locale");
-	bindtextdomain("mvoice", localedir.c_str());
-	textdomain("mvoice");
+	bindtextdomain("yamvoice", localedir.c_str());
+	textdomain("yamvoice");
 
 	// make the user's config directory
 	auto home = getenv("HOME");
