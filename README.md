@@ -1,3 +1,5 @@
+This is original README.md, see [README-yamvoice.md](README-yamvoice.md) for yamvoice.
+
 # M17 Digital Voice, now using FLTK
 
 *M17 Digital Voice* , mvoice, is a fully functional, M17 gateway and module for both voice and packet mode. For voice, it uses David Rowes Codec 2 and operates as a complete M17 repeater, only there is no RF component. It can Link to M17 reflectors and it can also do *routing*! It works best with a USB-based headset with microphone. mvoice uses the default pulseaudio/ALSA input and output device, so for most versions of linux, all you need to do is plug your headset in and you should be ready to go. mvoice does SMS texting using M17 Packet mode. At this time, mvoice only supports SMS texting.
