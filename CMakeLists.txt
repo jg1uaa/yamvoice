@@ -60,6 +60,8 @@ endif()
 
 if(DEBUG)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ggdb")
+else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 endif()
 if(USE44100)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE44100")
