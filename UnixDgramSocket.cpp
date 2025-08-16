@@ -29,6 +29,18 @@
 
 #include "UnixDgramSocket.h"
 
+#ifdef USE_NAMED_SOCKET
+#define SocketNamePtr(x) (x)
+#define StoreSocketName(x, n) snprintf(SocketNamePtr(x), sizeof(x), "/tmp/.yamvoice-%s.sock", (n))
+#define SaveSocketPath(x) {socket_path = (x);}
+#define RemoveSocketPath() remove(socket_path.c_str())
+#else
+#define SocketNamePtr(x) ((x) + 1)
+#define StoreSocketName(x, n) strncpy(SocketNamePtr(x), (n), sizeof(x) - 2)
+#define SaveSocketPath(x) /* */
+#define RemoveSocketPath() /* */
+#endif
+
 CUnixDgramReader::CUnixDgramReader() : fd(-1) {}
 
 CUnixDgramReader::~CUnixDgramReader()
@@ -48,7 +60,8 @@ bool CUnixDgramReader::Open(const char *path)	// returns true on failure
 	struct sockaddr_un addr;
 	memset(&addr, 0, sizeof(addr));
 	addr.sun_family = AF_UNIX;
-	strncpy(addr.sun_path+1, path, sizeof(addr.sun_path)-2);
+	StoreSocketName(addr.sun_path, path);
+	SaveSocketPath(addr.sun_path);
 
 	int rval = bind(fd, (struct sockaddr *)&addr, sizeof(addr));
 	if (rval < 0) {
@@ -75,6 +88,7 @@ void CUnixDgramReader::Close()
 	if (fd >= 0)
 		close(fd);
 	fd = -1;
+	RemoveSocketPath();
 }
 
 int CUnixDgramReader::GetFD()
@@ -91,7 +105,7 @@ void CUnixDgramWriter::SetUp(const char *path)	// returns true on failure
 	// setup the socket address
 	memset(&addr, 0, sizeof(addr));
 	addr.sun_family = AF_UNIX;
-	strncpy(addr.sun_path+1, path, sizeof(addr.sun_path)-2);
+	StoreSocketName(addr.sun_path, path);
 }
 
 ssize_t CUnixDgramWriter::Write(const void *buf, size_t size)
