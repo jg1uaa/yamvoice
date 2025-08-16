@@ -19,7 +19,6 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <alsa/asoundlib.h>
 
 #include "AudioManager.h"
 #include "SettingsDlg.h"
